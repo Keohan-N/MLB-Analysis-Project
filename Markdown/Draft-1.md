@@ -22,28 +22,7 @@ The data will be formatted and visualized by means of the 'tidyverse' and 'ggplo
 
 
 
-```{r Setup, include=FALSE}
 
-knitr::opts_chunk$set(
-  comment = '', fig.width = 8, fig.height = 9,
-  echo = FALSE, message = FALSE, warning = FALSE,
-  results = 'hide', cache = TRUE
-)
-
-#Libraries
-{
-  library(Lahman)
-  library(tidyverse)
-  library(ggplot2)
-  library(ggrepel)
-  library(ggstar)
-  library(directlabels)
-  library(scales)
-  library(gghighlight)
-  library(hexbin)
-}
-
-```
 
 
 ### Top Team Managers
@@ -52,12 +31,7 @@ We'll take a look at the most successful team managers since 1884. This will be 
 
 By manipulating the Managers and Teams tables in the 'Lahman' package, we can get our dataset started. 
 
-```{r MgrDataPrep}
 
-setwd("..")
-source("Scripts/Visualizations/Top Team Managers/Top Managers - Data Prep.R")
-
-```
 
 \newpage
 
@@ -65,16 +39,7 @@ Determining the performance of managers can be from numerous perspectives. We'll
 
 Below are the top 5 coaches by World Series Championships. Showing the cumulative championships by manager, irrespective of the team that they managed.
 
-```{r Mgr.WS}
-
-setwd("..")
-source(
-  "Scripts/Visualizations/Top Team Managers/Top Managers - World Series Championships.R",
-  local = knitr::knit_global()
-) %>% 
-  print()
-
-```
+![](Draft-1_files/figure-html/Mgr.WS-1.png)<!-- -->
 
 </br>
 
@@ -86,30 +51,11 @@ Another perspective is to consider the total number of wins a manager is able to
 
 
 
-```{r Mgr.Cumulative.Wins.Chart}
-
-setwd("..")
-source(
-  "Scripts/Visualizations/Top Team Managers/Top Managers - Cumulative Wins.R",
-  local = knitr::knit_global()
-) %>% 
-  print()
-
-```
+![](Draft-1_files/figure-html/Mgr.Cumulative.Wins.Chart-1.png)<!-- -->
 
 \newpage 
 
 ### Regular vs. Post Season Performance 
 
-```{r Post.Seas.Chart}
-
-setwd("..")
-source(
-  "Scripts/Visualizations/Post-Season Analysis/Post-Season Analysis - Chart.R",
-  local = knitr::knit_global()
-) %>% 
-  print()
-
-
-```
+![](Draft-1_files/figure-html/Post.Seas.Chart-1.png)<!-- -->
 
