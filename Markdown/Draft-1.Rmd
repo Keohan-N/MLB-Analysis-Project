@@ -38,7 +38,7 @@ A more thorough reading of this database can be found at [Sean Lahman's website]
 knitr::opts_chunk$set(
   comment = '', fig.width = 8, fig.height = 9,
   echo = FALSE, message = FALSE, warning = FALSE,
-  results = 'hide', cache = TRUE
+  results = 'hide', cache = FALSE
 )
 
 #Libraries
@@ -61,7 +61,8 @@ knitr::opts_chunk$set(
 
 We'll take a look at the most successful team managers since 1884. This will be done by looking at most wins and most World Series Championships.
 
-By manipulating the Managers and Teams tables in the 'Lahman' package, we can get our dataset started. 
+By joining the Managers and Teams tables in the Lahman database, we're able to approach this task.
+
 
 ```{r MgrDataPrep}
 
@@ -70,11 +71,14 @@ source("Scripts/Visualizations/Top Team Managers/Top Managers - Data Prep.R")
 
 ```
 
-\newpage
+#### World Series Championships
 
 Determining the performance of managers can be from numerous perspectives. We'll begin with the metric used to determine the best team each year: World Series Championships.
 
-Below are the top 5 coaches by World Series Championships. Showing the cumulative championships by manager, irrespective of the team that they managed.
+Below are the team managers with three or more World Series Championships. Showing the cumulative championships by manager, irrespective of the team that they managed.
+
+</br>
+
 
 ```{r Mgr.WS}
 
@@ -87,11 +91,16 @@ source(
 
 ```
 
-</br>
+As can be immediately seen, four of the top five team managers occurred prior to 1975, the year that the players' union was strengthed, and none of these managers had a win in the dead-ball era, pre-1920. 17 of these 24 World Series Championships occurred under the New York Yankees from 1920 to 1960. 
 
-\newpage
+  Interestingly, of these top 5 team managers, only one of them, Walter Alston, was able to win a World Series at more than one franchise. This even despite the top 2, Joe McCarthy and Casey Stengel, each winning seven World Series with the New York Yankees before have multiple seasons at another team before retirement. 
+  
+  This calls to question the effectiveness of a team manager in winning a World Series Championship. Even moreso when considering that after 1975, when players were not stuck at a certain team but could go to the highest bidder, only a single team manager has led a team to the World Series Championship three times.
+  
+  
+#### Total Wins
 
-Another perspective is to consider the total number of wins a manager is able to lead their teams to.
+Another perspective is to consider the total number of wins a manager is able to lead their teams to. The chart below maps out the total cumulative wins by a team manager over time, irregardless of the franchise. Every team manager is included but only the top ten are emphasized. The years with a star represent a World Series Championship with a label for the franchise.
 
 </br>
 
@@ -108,7 +117,7 @@ source(
 
 ```
 
-\newpage 
+  Of the
 
 ### Regular vs. Post Season Performance 
 

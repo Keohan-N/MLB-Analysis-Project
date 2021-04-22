@@ -40,11 +40,12 @@ A more thorough reading of this database can be found at [Sean Lahman's website]
 
 We'll take a look at the most successful team managers since 1884. This will be done by looking at most wins and most World Series Championships.
 
-By manipulating the Managers and Teams tables in the 'Lahman' package, we can get our dataset started. 
+By joining the Managers and Teams tables in the Lahman database, we're able to approach this task.
 
 
 
-\newpage
+
+#### World Series Championships
 
 Determining the performance of managers can be from numerous perspectives. We'll begin with the metric used to determine the best team each year: World Series Championships.
 
@@ -52,9 +53,13 @@ Below are the top 5 coaches by World Series Championships. Showing the cumulativ
 
 ![](Draft-1_files/figure-html/Mgr.WS-1.png)<!-- -->
 
-</br>
+As can be immediately seen, four of the top five team managers occurred prior to 1975, the year that the players' union was strengthed, and none of these managers had a win in the dead-ball era, pre-1920. 17 of these 24 World Series Championships occurred under the New York Yankees from 1920 to 1960. 
 
-\newpage
+  Interestingly, of these top 5 team managers, only one of them, Walter Alston, was able to win a World Series at more than one franchise. This even despite the top 2, Joe McCarthy and Casey Stengel, each winning seven World Series with the New York Yankees before moving to another team before retirement. 
+  
+  This calls to question the effectiveness of a team manager in winning a World Series Championship. Even moreso when considering that after 1975 when players were not stuck at a certain team but could go to the highest bidder, the era of 
+
+
 
 Another perspective is to consider the total number of wins a manager is able to lead their teams to.
 

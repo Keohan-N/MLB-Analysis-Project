@@ -2,7 +2,7 @@
 
 
 
-#Top 5 managers by WS Championships
+#Team managers with >= 3 WS Championships
 {
   temp <- left_join(
     x = Managers,
@@ -29,10 +29,13 @@
     ) %>% #select(yearID, playerID, teamID, team.chg)
     replace_na(list(team.chg = 1)) %>% 
     filter(
-      playerID %in% (ungroup(.) %>% 
-                       select(playerID, Total.WSWin) %>%
-                       distinct() %>% 
-                       top_n(5, Total.WSWin))$playerID
+      playerID %in% (
+          ungroup(.) %>% 
+          select(playerID, Total.WSWin) %>%
+          distinct() %>% 
+          #top_n(5, Total.WSWin)
+          filter(Total.WSWin >= 3)
+      )$playerID
     ) %>% 
     left_join(
       x = ., y = People, by = "playerID", suffix = c("", ".y")
@@ -70,7 +73,7 @@
     scale_x_continuous(n.breaks = 10) +
     scale_fill_discrete(guide = FALSE) +
     ggtitle(
-      "Top 5 Team Managers by World Series Championships",
+      "Team Managers with Three or More World Series Championships",
       "1884 - 2019"
     ) +
     xlab("Year") +
@@ -92,3 +95,6 @@
   
   
 }
+
+
+
