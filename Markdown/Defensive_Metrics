@@ -1,0 +1,2 @@
+img <- readPNG("C:/Users/keoha/OneDrive/Documents/ADEC7910 SoftwareTools/BaseballProj/Defensive_Stats_Scaled.twb")
+grid::grid.raster(img)
