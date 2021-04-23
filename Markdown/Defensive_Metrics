@@ -1,2 +1,3 @@
 img <- readPNG("C:/Users/keoha/OneDrive/Documents/ADEC7910 SoftwareTools/BaseballProj/Defensive_Stats_Scaled.twb")
 grid::grid.raster(img)
+#importing the scaled version of defensive metrics dynamics during the implementation of defensive shifts for LH batters
